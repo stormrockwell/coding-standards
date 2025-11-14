@@ -13,8 +13,6 @@
 
 	<!-- Include WordPress Coding Standards -->
 	<rule ref="WordPress">
-		<!-- Disable internationalization checks -->
-		<exclude name="WordPress.WP.I18n" />
 	</rule>
 
 	<!-- Control Structure Spacing -->
@@ -50,6 +48,15 @@
 
 	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
 		<exclude-pattern>*/tests/*</exclude-pattern>
+	</rule>
+
+	<!-- Internationalization Configuration -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="impulse"/>
+			</property>
+		</properties>
 	</rule>
 
 	<rule ref="WordPress.Files.FileName.NotHyphenatedLowercase">
