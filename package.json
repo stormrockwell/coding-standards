@@ -1,0 +1,35 @@
+{
+	"name": "@digitalimpulse/coding-standards",
+	"version": "1.0.0",
+	"description": "Shared ESLint, Stylelint, Prettier, and TypeScript configs for DemandDrive projects.",
+	"repository": "git@github.com:digitalimpulse/coding-standards.git",
+	"license": "GPL-2.0",
+	"author": "DemandDrive Team <dev@demanddrive.com>",
+	"private": false,
+	"files": [
+		"eslint",
+		"stylelint",
+		"prettier",
+		"tsconfig",
+		"editorconfig"
+	],
+	"exports": {
+		"./eslint": "./eslint/index.js",
+		"./stylelint": "./stylelint/index.cjs",
+		"./prettier": "./prettier/index.js",
+		"./tsconfig/base.json": "./tsconfig/base.json"
+	},
+	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": ">=5",
+		"@typescript-eslint/parser": ">=5",
+		"@wordpress/eslint-plugin": ">=17",
+		"@wordpress/stylelint-config": ">=20",
+		"eslint": ">=8",
+		"eslint-import-resolver-typescript": ">=3",
+		"prettier": ">=3",
+		"stylelint": ">=14",
+		"stylelint-order": ">=6",
+		"stylelint-semantic-groups": ">=1",
+		"typescript": ">=4.9"
+	}
+}
