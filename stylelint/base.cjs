@@ -22,7 +22,7 @@ const customPropertyOrdering = propertyOrdering.map((groups) => {
 customPropertyOrdering[0] = [contentProperty, ...customPropertyOrdering[0]];
 
 module.exports = {
-	extends: '@wordpress/stylelint-config/scss',
+	extends: 'stylelint-config-recommended-scss',
 	plugins: ['stylelint-order'],
 	rules: {
 		'at-rule-empty-line-before': [
