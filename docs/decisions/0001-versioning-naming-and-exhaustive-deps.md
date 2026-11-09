@@ -36,7 +36,7 @@ Recommendation: rename both packages to the `demanddrive` namespace, in the same
 - The PHPCS standard names `DemandDrive` and `DemandDriveBase` already use the target name, so rulesets and sniff codes do not change.
 - Each consumer must change one dependency key and every config string that contains `@digitalimpulse/coding-standards`. Count the consumers before the release, because that count is the cost of this decision.
 - Because the packages install from Git and not from a registry, the `@demanddrive` scope needs no registry setup.
-- If a consumer cannot migrate yet, it stays on its current tag. Tags are immutable, so nothing breaks until it chooses to move.
+- If a consumer cannot migrate yet, it stays on its current tag. The existing tags stay where they are, so nothing breaks until it chooses to move.
 
 Rejected: renaming the repository back to `digitalimpulse`, because the organization that owns the repository is `demanddrive`, and leaving the names as they are, because every new project would copy the mismatch.
 
