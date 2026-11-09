@@ -1,15 +1,9 @@
 <?xml version="1.0"?>
 <ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DemandDrive" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
-	<description>DemandDrive coding standards</description>
+	<description>DemandDrive coding standards with the WordPress layer</description>
 
-	<!-- Include some PSR-12 rules -->
-	<rule ref="PSR12.Functions.ReturnTypeDeclaration"/>
-	<rule ref="PSR12.Keywords.ShortFormTypeKeywords"/>
-
-	<!-- Custom DemandDrive sniffs -->
-	<rule ref="DemandDrive.BEM.ClassNaming"/>
-	<rule ref="DemandDrive.Conditionals.ConditionalAlternateSyntax"/>
-	<rule ref="DemandDrive.Conditionals.ConditionalIndentation"/>
+	<!-- Everything that does not depend on WordPress lives in the base layer. -->
+	<rule ref="DemandDriveBase"/>
 
 	<!-- Include WordPress Coding Standards -->
 	<rule ref="WordPress">

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="DemandDriveBase" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/squizlabs/PHP_CodeSniffer/master/phpcs.xsd">
+	<description>DemandDrive coding standards without WordPress</description>
+
+	<!-- Include some PSR-12 rules. -->
+	<rule ref="PSR12.Functions.ReturnTypeDeclaration"/>
+	<rule ref="PSR12.Keywords.ShortFormTypeKeywords"/>
+
+	<!-- The sniffs stay in the DemandDrive standard so their codes, used in ignore comments and excludes, do not change. -->
+	<rule ref="DemandDrive.BEM.ClassNaming"/>
+	<rule ref="DemandDrive.Conditionals.ConditionalAlternateSyntax"/>
+	<rule ref="DemandDrive.Conditionals.ConditionalIndentation"/>
+</ruleset>
