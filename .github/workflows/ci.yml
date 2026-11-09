@@ -14,7 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         # The lowest version composer.json allows, and the newest in common use.
-        php: ['7.4', '8.3']
+        php: ['8.0', '8.3']
     steps:
       - uses: actions/checkout@v4
 
