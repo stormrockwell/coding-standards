@@ -1,0 +1,74 @@
+<?php
+// Alternate syntax without PHP closing tags is an error.
+if ( true ) {
+	echo 'do something';
+}
+
+while ( true ) {
+	echo 'loop';
+}
+
+foreach ( $items as $item ) {
+	echo $item;
+}
+
+if ( $a ) {
+	echo 'a';
+} elseif ( $b ) {
+	echo 'b';
+} else {
+	echo 'c';
+}
+
+if ( true ) {
+	echo 'true';
+} else {
+	echo 'false';
+}
+
+// Curly braces are always allowed.
+if ( true ) {
+	echo 'do something';
+}
+
+while ( true ) {
+	echo 'loop';
+}
+
+foreach ( $items as $item ) {
+	echo $item;
+}
+
+for ( $i = 0; $i < 10; $i++ ) {
+	echo $i;
+}
+
+// Ternary operators are not alternate syntax.
+$result = $condition ? 'true' : 'false';
+$result = $a ? ( $b ? 'ab' : 'a' ) : 'none';
+
+// Alternate syntax is allowed when the block closes the PHP tag, as in a template.
+if ( true ):
+	echo 'true';
+	?>
+	<p>HTML content</p>
+	<?php
+endif;
+
+foreach ( $items as $item ):
+	?>
+	<li><?php echo $item; ?></li>
+	<?php
+endforeach;
+
+// A mixed block with curly braces outside is still an error for the inner alternate syntax.
+if ( $a ) {
+	if ( $b ) {
+		echo 'mixed';
+	}
+}
+
+// Known gap, the sniff skips a for loop because the semicolons in its header end the search for the colon.
+for ( $i = 0; $i < 10; $i++ ):
+	echo $i;
+endfor;
