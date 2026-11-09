@@ -66,7 +66,19 @@ The custom sniffs live in the `DemandDrive` standard for both layers, so their c
 1. Create a sniff class in `src/Standards/DemandDrive/Sniffs/Category/SniffNameSniff.php`
 2. Implement the `Sniff` interface
 3. Add the rule to `src/Standards/DemandDrive/ruleset.xml`
-4. Add tests in `tests/Category/SniffNameSniffTest.php`
+4. Add a fixture `tests/Category/SniffNameUnitTest.inc` and a test class `tests/Category/SniffNameUnitTest.php` that extends `DemandDrive\Tests\AbstractSniffTest`
+5. If the sniff has a fixer, add the expected result as `tests/Category/SniffNameUnitTest.inc.fixed`
+
+The test class lists the lines where the fixture must produce errors and warnings in `getErrorList()` and `getWarningList()`. A line that is not listed must be clean, so each fixture holds both flagged and unflagged code.
+
+### Running the sniff tests
+
+```bash
+composer install
+composer test
+```
+
+The tests use the sniff test framework that ships with PHP_CodeSniffer, which runs each sniff against its `.inc` fixture and fails when the reported lines differ from the expected lists.
 
 ## JS/TS/CSS (npm)
 
