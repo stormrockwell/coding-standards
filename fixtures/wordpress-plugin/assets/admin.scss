@@ -1,0 +1,10 @@
+$gap: 1rem;
+
+.fixture-plugin {
+	display: block;
+	padding: $gap;
+
+	&__title {
+		font-size: 1rem;
+	}
+}

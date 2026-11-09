@@ -33,7 +33,8 @@
 	"scripts": {
 		"test": "phpunit",
 		"phpcs": "phpcs --standard=PSR12 src/ tests/",
-		"phpcbf": "phpcbf --standard=PSR12 src/ tests/"
+		"phpcbf": "phpcbf --standard=PSR12 src/ tests/",
+		"lint:fixtures": "phpcs fixtures/php-base --standard=fixtures/php-base/phpcs.xml --extensions=php && phpcs fixtures/wordpress-plugin --standard=fixtures/wordpress-plugin/phpcs.xml --extensions=php"
 	},
 	"config": {
 		"sort-packages": true,
